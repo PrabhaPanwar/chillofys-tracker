@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mood & Sleep Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js for graphs -->
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Mood & Sleep Tracker</h1>
+      <p>Track your mood and sleep quality every day!</p>
+    </header>
+
+    <main>
+      <section class="tracker">
+        <div class="mood-section">
+          <h2>How are you feeling today?</h2>
+          <form id="moodForm">
+            <label for="mood">Select your mood:</label>
+            <select id="mood" name="mood">
+              <option value="happy">Happy</option>
+              <option value="neutral">Neutral</option>
+              <option value="sad">Sad</option>
+              <option value="stressed">Stressed</option>
+              <option value="angry">Angry</option>
+            </select>
+            <button type="submit">Log Mood</button>
+          </form>
+        </div>
+
+        <div class="sleep-section">
+          <h2>How well did you sleep last night?</h2>
+          <form id="sleepForm">
+            <label for="sleepHours">Hours of Sleep:</label>
+            <input type="number" id="sleepHours" name="sleepHours" min="0" max="24" required>
+            
+            <label for="sleepQuality">Sleep Quality (1-5):</label>
+            <input type="number" id="sleepQuality" name="sleepQuality" min="1" max="5" required>
+            
+            <button type="submit">Log Sleep</button>
+          </form>
+          <div id="sleepQuestion" style="display: none;">
+            <p>Your sleep quality seems low and you got less than 6 hours of sleep. Do you need tips for better sleep?</p>
+            <button id="sleepTipsBtn">Get Tips</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="records">
+        <h2>Your Entries</h2>
+        <div id="moodRecords"></div>
+        <div id="sleepRecords"></div>
+      </section>
+
+      <section class="charts">
+        <h2>Tracking Overview</h2>
+        <div id="moodChartContainer">
+          <canvas id="moodChart"></canvas>
+        </div>
+        <div id="sleepChartContainer">
+          <canvas id="sleepChart"></canvas>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Made with care, Mood & Sleep Tracker <3</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

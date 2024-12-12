@@ -1,0 +1,175 @@
+/* Reset and General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #e0f7fa, #fff3e0); /* Soft pastel gradient */
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  max-width: 900px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: center;
+}
+
+header {
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2.5em;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2em;
+  color: #7f8c8d;
+}
+
+.tracker {
+  margin-bottom: 40px;
+}
+
+.mood-section,
+.sleep-section {
+  background: #fafafa; /* Light background */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.mood-section h2,
+.sleep-section h2 {
+  font-size: 1.8em;
+  color: #34495e;
+  margin-bottom: 15px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-size: 1.1em;
+  color: #34495e;
+}
+
+select,
+input[type="number"] {
+  padding: 10px;
+  font-size: 1.1em;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #a8d5ba; /* Light greenish pastel */
+  color: white;
+  font-size: 1.2em;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #76bfa7; /* Slightly darker green */
+}
+
+#sleepQuestion {
+  margin-top: 20px;
+}
+
+.records {
+  margin-top: 40px;
+}
+
+.records h2 {
+  font-size: 2em;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.record {
+  background: #ecf0f1; /* Light gray background */
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  color: #34495e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer {
+  margin-top: 40px;
+  font-size: 1.1em;
+  color: #7f8c8d;
+}
+
+footer p {
+  font-style: italic;
+}
+
+.charts {
+  margin-top: 40px;
+}
+
+#sleepChartContainer, #moodChartContainer {
+  width: 100%;
+  height: 300px;
+  margin-top: 30px;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+    width: 100%;
+  }
+
+  header h1 {
+    font-size: 2em;
+  }
+
+  .mood-section h2,
+  .sleep-section h2 {
+    font-size: 1.5em;
+  }
+
+  .tracker {
+    margin-bottom: 30px;
+  }
+
+  form {
+    gap: 10px;
+  }
+
+  button {
+    font-size: 1.1em;
+  }
+
+  .records h2 {
+    font-size: 1.8em;
+  }
+}
